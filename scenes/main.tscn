@@ -4,7 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://cr4ula5cgd1e1" path="res://Terrain (16x16).png" id="2_jyhfs"]
 [ext_resource type="PackedScene" uid="uid://l75vlvn2m1cb" path="res://scenes/main_character.tscn" id="3_tbgi4"]
 [ext_resource type="Script" uid="uid://b7qmjiqvoaf1g" path="res://scenes/main_character.gd" id="4_jyhfs"]
-[ext_resource type="PackedScene" uid="uid://cbdrk4c8keoc3" path="res://scenes/collectibles.tscn" id="5_tbgi4"]
+[ext_resource type="PackedScene" uid="uid://cnnmv1svi2w8b" path="res://scenes/collectable.tscn" id="5_tbgi4"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_1bvp3"]
 texture = ExtResource("2_jyhfs")
@@ -204,16 +204,20 @@ position = Vector2(52, 19)
 position_smoothing_enabled = true
 position_smoothing_speed = 7.0
 
-[node name="Collectible" parent="." instance=ExtResource("5_tbgi4")]
+[node name="Collectable" parent="." instance=ExtResource("5_tbgi4")]
+position = Vector2(47, 141)
 
-[node name="Collectible2" parent="." instance=ExtResource("5_tbgi4")]
-position = Vector2(195, -46)
+[node name="Collectable2" parent="." instance=ExtResource("5_tbgi4")]
+position = Vector2(278, 468)
 
-[node name="Collectible3" parent="." instance=ExtResource("5_tbgi4")]
-position = Vector2(425, -45)
+[node name="Collectable3" parent="." instance=ExtResource("5_tbgi4")]
+position = Vector2(463, 419)
 
-[node name="Collectible4" parent="." instance=ExtResource("5_tbgi4")]
-position = Vector2(547, -235)
+[node name="Collectable4" parent="." instance=ExtResource("5_tbgi4")]
+position = Vector2(702, 419)
 
-[node name="Collectible5" parent="." instance=ExtResource("5_tbgi4")]
-position = Vector2(192, -334)
+[node name="Collectable5" parent="." instance=ExtResource("5_tbgi4")]
+position = Vector2(825, 231)
+
+[node name="Collectable6" parent="." instance=ExtResource("5_tbgi4")]
+position = Vector2(460, 138)
