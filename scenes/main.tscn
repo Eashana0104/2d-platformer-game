@@ -200,3 +200,5 @@ script = ExtResource("4_jyhfs")
 
 [node name="Camera2D" type="Camera2D" parent="CharacterBody2D"]
 position = Vector2(52, 19)
+position_smoothing_enabled = true
+position_smoothing_speed = 7.0
