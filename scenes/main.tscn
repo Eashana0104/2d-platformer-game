@@ -176,7 +176,12 @@ sources/0 = SubResource("TileSetAtlasSource_1bvp3")
 
 [node name="Node" type="Node"]
 
-[node name="TextureRect" type="TextureRect" parent="."]
+[node name="GameManager" type="Node" parent="."]
+script = ExtResource("6_tefeu")
+
+[node name="Scene Objects" type="Node" parent="."]
+
+[node name="TextureRect" type="TextureRect" parent="Scene Objects"]
 texture_filter = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -188,42 +193,61 @@ grow_vertical = 2
 texture = ExtResource("1_sugp2")
 stretch_mode = 1
 
-[node name="TileMapLayer" type="TileMapLayer" parent="."]
+[node name="TileMapLayer" type="TileMapLayer" parent="Scene Objects"]
 texture_filter = 1
 position = Vector2(1, 0)
 scale = Vector2(3, 3)
 tile_map_data = PackedByteArray("AAAAAAwAAAAGAAAAAAABAAwAAAAHAAAAAAACAAwAAAAHAAAAAAADAAwAAAAHAAAAAAAEAAwAAAAHAAAAAAAFAAwAAAAHAAAAAAAGAAwAAAAHAAAAAAAHAAwAAAAHAAAAAAAIAAwAAAAHAAAAAAAJAAwAAAAHAAAAAAAKAAwAAAAHAAAAAAALAAwAAAAHAAAAAAAMAAwAAAAHAAAAAAANAAwAAAAHAAAAAAAOAAwAAAAHAAAAAAAPAAwAAAAHAAAAAAAQAAwAAAAHAAAAAAARAAwAAAAHAAAAAAASAAwAAAAHAAAAAAABAAsAAAAGAAEAAAACAAsAAAAHAAEAAAADAAsAAAAIAAEAAAAKAAoAAAAGAAAAAAAKAAsAAAAGAAIAAAALAAoAAAAHAAAAAAALAAsAAAAHAAIAAAAMAAoAAAAIAAAAAAAMAAsAAAAIAAIAAAABAAgAAAAGAAEAAAABAAkAAAAHAAAAAAACAAgAAAAHAAEAAAACAAkAAAAHAAAAAAADAAgAAAAIAAEAAAADAAkAAAAIAAEAAAABAAQAAAAGAAAAAAABAAUAAAAGAAEAAAABAAYAAAAGAAEAAAACAAQAAAAHAAAAAAADAAQAAAAIAAAAAAAEAAUAAAAIAAAAAAAGAAsAAAAGAAAAAAAHAAsAAAAHAAAAAAAIAAsAAAAIAAAAAAAPAAoAAAAGAAAAAAAPAAsAAAAGAAIAAAAQAAoAAAAHAAAAAAAQAAsAAAAHAAIAAAARAAoAAAAIAAAAAAARAAsAAAAIAAIAAAAIAAQAAAAGAAAAAAAIAAUAAAAGAAEAAAAIAAYAAAAGAAIAAAAJAAQAAAAHAAAAAAAJAAUAAAAHAAEAAAAJAAYAAAAHAAIAAAANAAQAAAAGAAAAAAANAAUAAAAGAAEAAAAOAAQAAAAHAAAAAAAOAAUAAAAHAAEAAAAPAAQAAAAIAAAAAAAPAAUAAAAIAAEAAAAKAAQAAAARAAEAAAALAAQAAAASAAEAAAAMAAQAAAATAAEAAAASAAYAAAAGAAAAAAASAAcAAAAGAAEAAAATAAYAAAAHAAAAAAATAAcAAAAHAAEAAAAWAAgAAAAHAAAAAAAWAAkAAAAHAAEAAAAXAAgAAAAGAAEAAAAXAAkAAAAGAAEAAAAVAAgAAAAGAAAAAAAVAAkAAAAGAAEAAAAVAAoAAAAGAAEAAAAVAAsAAAAGAAEAAAAWAAoAAAAGAAAAAAAWAAsAAAAHAAEAAAAXAAoAAAAGAAEAAAAXAAsAAAAGAAEAAAAVAAwAAAAHAAAAAAAWAAwAAAAHAAAAAAAXAAwAAAAIAAAAAAABAAoAAAAGAAEAAAACAAoAAAAHAAEAAAADAAoAAAAIAAEAAAABAAcAAAAGAAEAAAACAAcAAAAHAAEAAAACAAYAAAAHAAEAAAADAAUAAAAHAAAAAAADAAYAAAAHAAEAAAADAAcAAAAHAAEAAAAEAAYAAAAIAAEAAAAEAAcAAAAIAAIAAAATAAwAAAAHAAAAAAAUAAwAAAAHAAAAAAAAAAsAAAAGAAEAAAAAAAoAAAAGAAEAAAAAAAkAAAAGAAEAAAAAAAgAAAAGAAEAAAAAAAcAAAAGAAEAAAAAAAYAAAAGAAEAAAAAAAUAAAAGAAEAAAAAAAQAAAAGAAEAAAAAAAMAAAAGAAEAAAAAAAIAAAAGAAEAAAAAAAEAAAAGAAEAAAAAAAAAAAAGAAEAAAAXAAAAAAAGAAEAAAAXAAEAAAAGAAEAAAAXAAIAAAAGAAEAAAAXAAMAAAAGAAEAAAAXAAQAAAAGAAEAAAAXAAUAAAAGAAEAAAAXAAYAAAAGAAEAAAAXAAcAAAAGAAEAAAAAAP//AAAGAAEAAAABAP//AAAGAAEAAAACAP//AAAGAAEAAAADAP//AAAGAAEAAAAEAP//AAAGAAEAAAAFAP//AAAGAAEAAAAGAP//AAAGAAEAAAAHAP//AAAGAAEAAAAIAP//AAAGAAEAAAAJAP//AAAGAAEAAAAKAP//AAAGAAEAAAALAP//AAAGAAEAAAAMAP//AAAGAAEAAAANAP//AAAGAAEAAAAOAP//AAAGAAEAAAAPAP//AAAGAAEAAAAQAP//AAAGAAEAAAARAP//AAAGAAEAAAASAP//AAAGAAEAAAAXAP//AAAGAAEAAAAWAP//AAAGAAEAAAAVAP//AAAGAAEAAAAUAP//AAAGAAEAAAATAP//AAAGAAEAAAACAAUAAAAGAAAAAAANAAoAAAARAAEAAAAOAAoAAAASAAEAAAA=")
 tile_set = SubResource("TileSet_lquwl")
 
-[node name="CharacterBody2D" parent="." instance=ExtResource("3_tbgi4")]
+[node name="CharacterBody2D" parent="Scene Objects" instance=ExtResource("3_tbgi4")]
 texture_filter = 1
 position = Vector2(223, 451)
 script = ExtResource("4_jyhfs")
 
-[node name="Camera2D" type="Camera2D" parent="CharacterBody2D"]
+[node name="Camera2D" type="Camera2D" parent="Scene Objects/CharacterBody2D"]
 position = Vector2(52, 19)
 position_smoothing_enabled = true
 position_smoothing_speed = 7.0
 
-[node name="Collectable Objects" type="Node" parent="."]
+[node name="Collectable Objects" type="Node" parent="Scene Objects"]
 
-[node name="Collectable6" parent="Collectable Objects" instance=ExtResource("5_tbgi4")]
+[node name="Collectable6" parent="Scene Objects/Collectable Objects" instance=ExtResource("5_tbgi4")]
 position = Vector2(460, 138)
 
-[node name="Collectable2" parent="Collectable Objects" instance=ExtResource("5_tbgi4")]
+[node name="Collectable2" parent="Scene Objects/Collectable Objects" instance=ExtResource("5_tbgi4")]
 position = Vector2(278, 468)
 
-[node name="Collectable" parent="Collectable Objects" instance=ExtResource("5_tbgi4")]
+[node name="Collectable" parent="Scene Objects/Collectable Objects" instance=ExtResource("5_tbgi4")]
 position = Vector2(47, 141)
 
-[node name="Collectable3" parent="Collectable Objects" instance=ExtResource("5_tbgi4")]
+[node name="Collectable3" parent="Scene Objects/Collectable Objects" instance=ExtResource("5_tbgi4")]
 position = Vector2(463, 419)
 
-[node name="Collectable4" parent="Collectable Objects" instance=ExtResource("5_tbgi4")]
+[node name="Collectable4" parent="Scene Objects/Collectable Objects" instance=ExtResource("5_tbgi4")]
 position = Vector2(702, 419)
 
-[node name="Collectable5" parent="Collectable Objects" instance=ExtResource("5_tbgi4")]
+[node name="Collectable5" parent="Scene Objects/Collectable Objects" instance=ExtResource("5_tbgi4")]
 position = Vector2(825, 231)
 
-[node name="GameManager" type="Node" parent="."]
-script = ExtResource("6_tefeu")
+[node name="UI" type="Node" parent="."]
+
+[node name="Panel" type="Panel" parent="UI"]
+offset_left = 57.0
+offset_top = 4.0
+offset_right = 238.0
+offset_bottom = 76.0
+
+[node name="Label" type="Label" parent="UI/Panel"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 2.0
+offset_right = 2.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 20
+text = "Points: 0"
+horizontal_alignment = 1
+vertical_alignment = 1
