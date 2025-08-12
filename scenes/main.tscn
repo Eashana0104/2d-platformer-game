@@ -230,13 +230,13 @@ position = Vector2(702, 419)
 [node name="Collectable5" parent="Scene Objects/Collectable Objects" instance=ExtResource("5_tbgi4")]
 position = Vector2(825, 231)
 
-[node name="UI" type="Node" parent="."]
+[node name="UI" type="CanvasLayer" parent="."]
 
 [node name="Panel" type="Panel" parent="UI"]
-offset_left = 57.0
-offset_top = 4.0
-offset_right = 238.0
-offset_bottom = 76.0
+offset_left = 43.0
+offset_top = -3.0
+offset_right = 224.0
+offset_bottom = 69.0
 
 [node name="Label" type="Label" parent="UI/Panel"]
 layout_mode = 1
