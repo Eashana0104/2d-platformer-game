@@ -5,5 +5,5 @@ var points = 0
 
 func increment_point():
 	points+=1
-	label.text = str("Points: ", points)
+	label.text = "Points: "+ str(points)
 	
