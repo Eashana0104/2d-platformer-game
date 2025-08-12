@@ -205,23 +205,25 @@ position = Vector2(52, 19)
 position_smoothing_enabled = true
 position_smoothing_speed = 7.0
 
-[node name="Collectable" parent="." instance=ExtResource("5_tbgi4")]
-position = Vector2(47, 141)
+[node name="Collectable Objects" type="Node" parent="."]
 
-[node name="Collectable2" parent="." instance=ExtResource("5_tbgi4")]
+[node name="Collectable6" parent="Collectable Objects" instance=ExtResource("5_tbgi4")]
+position = Vector2(460, 138)
+
+[node name="Collectable2" parent="Collectable Objects" instance=ExtResource("5_tbgi4")]
 position = Vector2(278, 468)
 
-[node name="Collectable3" parent="." instance=ExtResource("5_tbgi4")]
+[node name="Collectable" parent="Collectable Objects" instance=ExtResource("5_tbgi4")]
+position = Vector2(47, 141)
+
+[node name="Collectable3" parent="Collectable Objects" instance=ExtResource("5_tbgi4")]
 position = Vector2(463, 419)
 
-[node name="Collectable4" parent="." instance=ExtResource("5_tbgi4")]
+[node name="Collectable4" parent="Collectable Objects" instance=ExtResource("5_tbgi4")]
 position = Vector2(702, 419)
 
-[node name="Collectable5" parent="." instance=ExtResource("5_tbgi4")]
+[node name="Collectable5" parent="Collectable Objects" instance=ExtResource("5_tbgi4")]
 position = Vector2(825, 231)
-
-[node name="Collectable6" parent="." instance=ExtResource("5_tbgi4")]
-position = Vector2(460, 138)
 
 [node name="GameManager" type="Node" parent="."]
 script = ExtResource("6_tefeu")
