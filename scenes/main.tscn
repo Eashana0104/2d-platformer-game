@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=4 uid="uid://pq0ybcc8xpw1"]
+[gd_scene load_steps=10 format=4 uid="uid://pq0ybcc8xpw1"]
 
 [ext_resource type="Texture2D" uid="uid://3hoegvcoduog" path="res://Green.png" id="1_sugp2"]
 [ext_resource type="Texture2D" uid="uid://cr4ula5cgd1e1" path="res://Terrain (16x16).png" id="2_jyhfs"]
@@ -6,6 +6,7 @@
 [ext_resource type="Script" uid="uid://b7qmjiqvoaf1g" path="res://scenes/main_character.gd" id="4_jyhfs"]
 [ext_resource type="PackedScene" uid="uid://cnnmv1svi2w8b" path="res://scenes/collectable.tscn" id="5_tbgi4"]
 [ext_resource type="Script" uid="uid://c1yj1h4yc5jbp" path="res://scenes/game_manager.gd" id="6_tefeu"]
+[ext_resource type="PackedScene" uid="uid://dg0b000a4ulg7" path="res://scenes/winning_trophy.tscn" id="7_o6xl0"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_1bvp3"]
 texture = ExtResource("2_jyhfs")
@@ -282,3 +283,5 @@ theme_override_font_sizes/font_size = 20
 text = "Points: 0"
 horizontal_alignment = 1
 vertical_alignment = 1
+
+[node name="WinningTrophy" parent="." instance=ExtResource("7_o6xl0")]
