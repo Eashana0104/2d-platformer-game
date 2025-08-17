@@ -1,10 +1,11 @@
-[gd_scene load_steps=9 format=4 uid="uid://csh0sxy3y6oxf"]
+[gd_scene load_steps=10 format=4 uid="uid://csh0sxy3y6oxf"]
 
 [ext_resource type="Script" uid="uid://c1yj1h4yc5jbp" path="res://scenes/game_manager.gd" id="1_6ep0u"]
 [ext_resource type="Texture2D" uid="uid://chsu6em2ve04d" path="res://Yellow.png" id="2_yqkch"]
 [ext_resource type="Texture2D" uid="uid://cr4ula5cgd1e1" path="res://Terrain (16x16).png" id="3_xa7n4"]
 [ext_resource type="PackedScene" uid="uid://l75vlvn2m1cb" path="res://scenes/main_character.tscn" id="4_bo4dx"]
 [ext_resource type="Script" uid="uid://b7qmjiqvoaf1g" path="res://scenes/main_character.gd" id="5_76toy"]
+[ext_resource type="PackedScene" uid="uid://dc5kxt1fs5dyr" path="res://scenes/collectable_level2.tscn" id="6_6ep0u"]
 [ext_resource type="PackedScene" uid="uid://dg0b000a4ulg7" path="res://scenes/winning_trophy.tscn" id="7_56gwk"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_1bvp3"]
@@ -240,6 +241,60 @@ position_smoothing_speed = 7.0
 
 [node name="Collectable Objects" type="Node" parent="Scene Objects"]
 
+[node name="CollectableLevel2" parent="Scene Objects/Collectable Objects" instance=ExtResource("6_6ep0u")]
+position = Vector2(108, 170)
+
+[node name="Area2D" parent="Scene Objects/Collectable Objects" instance=ExtResource("6_6ep0u")]
+position = Vector2(456, 371)
+
+[node name="Area2D2" parent="Scene Objects/Collectable Objects" instance=ExtResource("6_6ep0u")]
+position = Vector2(347, 128)
+
+[node name="Area2D3" parent="Scene Objects/Collectable Objects" instance=ExtResource("6_6ep0u")]
+position = Vector2(580, 80)
+
+[node name="Area2D4" parent="Scene Objects/Collectable Objects" instance=ExtResource("6_6ep0u")]
+position = Vector2(743, 186)
+
+[node name="Area2D5" parent="Scene Objects/Collectable Objects" instance=ExtResource("6_6ep0u")]
+position = Vector2(910, 86)
+
+[node name="Area2D6" parent="Scene Objects/Collectable Objects" instance=ExtResource("6_6ep0u")]
+position = Vector2(554, 232)
+
+[node name="Area2D7" parent="Scene Objects/Collectable Objects" instance=ExtResource("6_6ep0u")]
+position = Vector2(737, 426)
+
+[node name="Area2D8" parent="Scene Objects/Collectable Objects" instance=ExtResource("6_6ep0u")]
+position = Vector2(1236, 82)
+
+[node name="Area2D9" parent="Scene Objects/Collectable Objects" instance=ExtResource("6_6ep0u")]
+position = Vector2(1124, 457)
+
+[node name="Area2D10" parent="Scene Objects/Collectable Objects" instance=ExtResource("6_6ep0u")]
+position = Vector2(1385, 273)
+
+[node name="Area2D11" parent="Scene Objects/Collectable Objects" instance=ExtResource("6_6ep0u")]
+position = Vector2(1774, 177)
+
+[node name="Area2D12" parent="Scene Objects/Collectable Objects" instance=ExtResource("6_6ep0u")]
+position = Vector2(1500, 75)
+
+[node name="Area2D13" parent="Scene Objects/Collectable Objects" instance=ExtResource("6_6ep0u")]
+position = Vector2(1712, 424)
+
+[node name="Area2D14" parent="Scene Objects/Collectable Objects" instance=ExtResource("6_6ep0u")]
+position = Vector2(1843, 507)
+
+[node name="Area2D15" parent="Scene Objects/Collectable Objects" instance=ExtResource("6_6ep0u")]
+position = Vector2(2084, 409)
+
+[node name="Area2D16" parent="Scene Objects/Collectable Objects" instance=ExtResource("6_6ep0u")]
+position = Vector2(2279, 272)
+
+[node name="Area2D17" parent="Scene Objects/Collectable Objects" instance=ExtResource("6_6ep0u")]
+position = Vector2(2501, 181)
+
 [node name="UI" type="CanvasLayer" parent="."]
 
 [node name="Panel" type="Panel" parent="UI"]
@@ -263,3 +318,4 @@ horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="WinningTrophy" parent="." instance=ExtResource("7_56gwk")]
+position = Vector2(4, 8)
