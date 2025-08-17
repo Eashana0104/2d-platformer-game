@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="2d platformer game"
-run/main_scene="uid://pq0ybcc8xpw1"
+run/main_scene="uid://csh0sxy3y6oxf"
 config/features=PackedStringArray("4.4", "Forward Plus")
 config/icon="res://icon.svg"
 
